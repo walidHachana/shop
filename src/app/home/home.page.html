@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Appli Shopping
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>Ici seront affiché tous les articles à vendre...</p>
+  
+  <ul *ngFor="let article of Articles">
+    <li (click)="showDetails(article)">{{article.nom}} - {{article.prix}}</li>
+  </ul>
+  <ion-button (click)="showDetails(article)">Details Page</ion-button>
+</ion-content>
+<ion-footer>
+  <p class="monFooter">Je suis le pied de page...</p>
+</ion-footer>
